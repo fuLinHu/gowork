@@ -13,7 +13,7 @@ func max(a ,b int) int{
 
 
 
-func main() {
+/*func main() {
 	var jj=max(3,4)
 	println(jj)
 	a,b:=swp("nihao","buhao")
@@ -22,7 +22,7 @@ func main() {
 		return i-j
 	}
 	test(f)
-}
+}*/
 
 
 func test(kk hand){
@@ -34,4 +34,19 @@ func swp(x,y string)(string,string){
 	return y,x
 }
 
+
+func fibonacci(a int)int{
+	println("--------------",a)
+	if(a<2){
+		return a;
+	}
+	return fibonacci(a-2)+fibonacci(a-1)
+}
+
+func main() {
+	for i:=0;i<10;i++{
+		println(fibonacci(i))
+	}
+
+}
 
