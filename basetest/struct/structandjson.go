@@ -1,42 +1,36 @@
 package main
 
-import (
-	"encoding/json"
-	"fmt"
-)
-
 type Student struct {
-	Name string `json:"name"`
-	Age  int `json:"age"`
-	Adre	`json:"adre"`
-	Sore []int `json:"sore"`
+	name string
+	age  int
+	adre
+	sore []int
 }
 
-type Adre struct {
-	City    string
-	Country string
+type adre struct {
+	city    string
+	country string
 }
 
 func main() {
 	s := []int{}
+	var ints []int
 	for i := 0; i < 10; i++ {
-		s = append(s, i)
+		ints = append(s, i)
 	}
-	student :=Student{}
-	student.Name = "付林虎"
-	student.Age = 20
-	student.Sore = s
-	a := Adre{
-		City:    "北京",
-		Country: "中国",
+	student := new(Student)
+	student.name = "付林虎"
+	student.age = 20
+	student.sore = ints
+	a := adre{
+		city:    "北京",
+		country: "中国",
 	}
-	student.Adre = a
-	fmt.Println(student)
-	data, e := json.Marshal(student)
-	fmt.Println(string(data))
-	fmt.Println(e)
-	var stu Student
-	unmarshal := json.Unmarshal([]byte(data), &stu)
-	fmt.Println(unmarshal)
-	fmt.Println(stu)
+	student.adre = a
+	//bytes, e := json.
+	/*fmt.Println(e)
+	if(e==nil){
+		fmt.Println(bytes)
+	}*/
+
 }
