@@ -1,8 +1,10 @@
 package base
 
+import "fmt"
+
 func main() {
 
-	var ptr *int
+	/*var ptr *int
 
 	var ptr1 *[]string
 	println(ptr == nil)
@@ -30,6 +32,16 @@ func main() {
 	ptrrr = &ptrr
 	println(*ptrr)
 	println(*ptrrr)
-	println(**ptrrr)
+	println(**ptrrr)*/
+   fmt.Println("0000000000000000000000")
+	var ii =new(int)
+	*ii =10
+	fmt.Println(*ii)
+
+
+	var m =make(map[string]string,0)
+	m["name"]="333"
+    fmt.Println(m["name"])
+
 
 }
