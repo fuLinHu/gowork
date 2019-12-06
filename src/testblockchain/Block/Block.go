@@ -44,7 +44,7 @@ func GengertNewBlock(data string, oldblock Block) Block {
 	newblock.preHash = oldblock.hashCode
 	newblock.timeStamp = time.Now().String()
 	//前到0为4
-	newblock.diff = 6
+	newblock.diff = 10
 	newblock.data = data
 	newblock.index = 2
 	//由旷工来调整

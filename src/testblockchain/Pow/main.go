@@ -11,7 +11,6 @@ func main() {
 	second := Block.GengertNewBlock("第二个区块", first)
 	//创建链表
 	header := BlockChain.CreateHeaderNode(&first)
-
 	//将第二个区块加入链表
 
 	BlockChain.AddNode(&second, header)
